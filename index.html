@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- main css -->
+  <link rel="stylesheet" href="css/main.css">
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_package_v0.16/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_package_v0.16/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_package_v0.16/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon_package_v0.16/site.webmanifest">
+  <link rel="mask-icon" href="img/favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="css/all.css">
+  <title>Restaurant Finder</title>
+  <style>
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <img src="img/Restaurant_Finder.svg" class="d-block mx-auto img-fluid img-thumbnail" alt="">
+        <div class="feedback alert alert-danger text-center text-capitalize">please enter city</div>
+        <section class="py-1">
+          <div class="container">
+            <div class="row">
+              <h4 class="text-capitalize text-center fw-bold">
+                available cities we are working now
+              </h4>
+              <div class="jumbotron">   
+                <p class="text-capitalize fw-bold cities" id="city-list">
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <form id="searchForm" class="my-4">
+          <!-- form group -->
+          <div class="form-group my-3">
+            <select class="form-select custom-select text-capitalize" id="searchCategory">
+            </select>
+          </div>
+          <!-- end of form group -->
+
+          <!-- input group -->
+          <div class="input-group d-flex justify-content-end">
+            <!-- <input type="text" class="form-control text-capitalize fw-bold" id="searchCity" placeholder="enter city...."> -->
+            <div class="input-group-append">
+              <button type="submit" class="btn btn-outline-danger redBtn text-capitalize">search</button>
+            </div>
+          </div>
+          <!-- input group -->
+        </form>
+
+        <img src="img/loader.gif" class="loader" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- restaurant section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row" id="restaurant-list">
+        <!-- item -->
+        <!-- <div class="col-11 mx-auto my-3 col-md-4">
+          <div class="card">
+            <div class="card">
+              <div class="row p-3">
+                <div class="col-5">
+                  <img src="img/food.jpeg" class="img-fluid img-thumbnail" alt="...">
+                </div>
+                <div class="col-5 text-capitalize">
+                  <h6 class="text-uppercase pt-2 fw-bold">name</h6>
+                  <p class="fw-bold">address</p>
+                </div>
+                <div class="col-1">
+                  <div class="badge bg-success">
+                    4.9
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="row py-3 ms-1">
+                <div class="col-5 text-uppercase ">
+                  <p class="fw-bold">cousines :</p>
+                  <p class="fw-bold">cost for two :</p>
+                </div>
+                <div class="col-7 text-uppercase">
+                  <p class="fw-bold">cousines</p>
+                  <p class="fw-bold">cost</p>
+                </div>
+              </div>
+              <hr>
+              <div class="row text-center no-gutters pb-3">
+                <div class="col-6">
+                  <a href="#" target="_blank" class="btn btn-outline-danger redBtn text-uppercase"><i
+                      class="fa-solid fa-utensils"></i> menu</a>
+                </div>
+                <div class="col-6">
+                  <a href="#" target="_blank" class="btn btn-outline-danger redBtn text-uppercase"><i
+                      class="fa-solid fa-globe"></i></i> website</a>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+        <!-- item -->
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- jquery -->
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <!-- script js -->
+  <script src="js/app.js"></script>
+</body>
+
+</html>

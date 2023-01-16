@@ -36,7 +36,22 @@ class RESTAURANTAPI {
         var categories = c.filter((v, i, a) => a.indexOf(v) === i);
         //console.log(categories);
 
-        
+        return categories;
+
+    }
+
+    async getCities(){
+
+         // category url
+         const categoryURL = `https://api.spoonacular.com/food/restaurants/search?apiKey=${this.apiKey}`;
+
+         // category data
+         const categoryInfo = await fetch(categoryURL, this.header);
+         const categoryJSON = await categoryInfo.json();
+         const category = await categoryJSON.restaurants;
+         //console.log(category,categoryJSON);
+
+               
         const cities = [];
         for (var i = 0; i < category.length; i++) {
             for (var key in category[i]) {
@@ -48,15 +63,14 @@ class RESTAURANTAPI {
         }
         //console.log(cities);
 
-        return categories, cities;
-
+        return cities;
     }
 
     async cityLocation(cuisine, lat, lng) {
 
         // city url
-        const cityURL = `https://api.spoonacular.com/food/restaurants/search?apiKey=${this.apiKey}&cuisine=${cuisine}&lat=${lat}&lng=${lng}`;
-        // const cityURL = `https://api.spoonacular.com/food/restaurants/search?apiKey=${this.apiKey}&cuisine=dinner&lat=42.3114312999&lng=-71.2750371081`;
+        // const cityURL = `https://api.spoonacular.com/food/restaurants/search?apiKey=${this.apiKey}&cuisine=${cuisine}&lat=${lat}&lng=${lng}`;
+        const cityURL = `https://api.spoonacular.com/food/restaurants/search?apiKey=${this.apiKey}&cuisine=dinner&lat=42.3114312999&lng=-71.2750371081`;
 
         //console.log(lat,lng);
 
@@ -194,6 +208,11 @@ class UI {
             .then((data) => {
                 //console.log(data);
                 ui.addSelectedOptions(data);
+            })
+            .catch(error => console.log(error));
+
+        restaurantApi.getCities()
+            .then((data)=>{
                 ui.addCities(data);
             })
             .catch(error => console.log(error));
@@ -256,8 +275,6 @@ class UI {
                     .catch(error => console.log(error));
 
             });
-
-
         }
     })
 })();

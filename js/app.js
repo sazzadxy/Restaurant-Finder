@@ -69,8 +69,8 @@ class RESTAURANTAPI {
     async cityLocation(cuisine, lat, lng) {
 
         // city url
-        // const cityURL = `https://api.spoonacular.com/food/restaurants/search?apiKey=${this.apiKey}&cuisine=${cuisine}&lat=${lat}&lng=${lng}`;
-        const cityURL = `https://api.spoonacular.com/food/restaurants/search?apiKey=${this.apiKey}&cuisine=dinner&lat=42.3114312999&lng=-71.2750371081`;
+        const cityURL = `https://api.spoonacular.com/food/restaurants/search?apiKey=${this.apiKey}&cuisine=${cuisine}&lat=${lat}&lng=${lng}`;
+        // const cityURL = `https://api.spoonacular.com/food/restaurants/search?apiKey=${this.apiKey}&cuisine=dinner&lat=42.3114312999&lng=-71.2750371081`;
 
         //console.log(lat,lng);
 
